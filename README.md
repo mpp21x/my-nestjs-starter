@@ -8,4 +8,9 @@ $ npm i @types/ramda --save-dev
 $ npm audit fix
 ```
 
+# Before Start
+
+* edit the openapi.yaml file 'title' and 'servers' url
+
 ## add JWT 
+

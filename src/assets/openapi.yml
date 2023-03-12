@@ -1,0 +1,53 @@
+openapi: 3.0.3
+
+info:
+  title: Matt Nest API
+  version: 1.0.0
+
+tags:
+  - name: root_url
+    description: It's used for test the server is working or not
+  - name: filter_units
+    description: Filter Units CRUD
+  - name: filter_unit_templates
+    description: Filter Units Templates Index
+  - name: filter_sets
+    description: Filter Set CRUD
+paths:
+  /:
+    post:
+      operationId: TestOpenAPIValidator
+      tags:
+        - root_url
+      requestBody:
+        content:
+          application/json:
+            schema:
+             $ref: '#/components/schemas/test_openapi_payload'
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                type: object
+              example: {}
+
+components:
+  schemas:
+    test_openapi_payload:
+      type: object
+      properties:
+       name:
+          type: string
+          example: "test"
+      required:
+        - name
+    update_delete_one_resource_response:
+      type: object
+      properties:
+        count:
+          type: integer
+          enum:
+            - 0
+            - 1

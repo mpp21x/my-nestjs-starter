@@ -11,6 +11,21 @@
     "outDir": "./dist",
     "baseUrl": "./",
     "incremental": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "typeRoots": [
+      "node_modules/@types",
+      "./src/types"
+    ],
+    "esModuleInterop": true,
+    "paths": {
+      "@core/*": ["./src/core/*"],
+      "@feature/*": ["./src/feature/*"],
+      "@lib/*": ["./src/lib/*"],
+      "@common/*": ["./src/common/*"],
+      "@auth/*": ["./src/auth/*"],
+      "@neo4j/*": ["./src/neo4j/*"],
+      "@opensearch/*": ["./src/opensearch/*"],
+    }
   }
 }
