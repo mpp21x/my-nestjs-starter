@@ -2,6 +2,8 @@ import * as ENV from 'dotenv';
 
 export interface IProcessEnv {
 	APP_PORT: number;
+	THROTTLE_TTL: number;
+	THROTTLE_LIMIT: number;
 }
 
 function get(): IProcessEnv {

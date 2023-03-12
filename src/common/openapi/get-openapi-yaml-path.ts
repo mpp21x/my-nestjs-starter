@@ -1,6 +1,7 @@
-import { getAssetsFolderPath } from '@common/assets/get-assets-folder-path';
+import { getSrcFolderPath } from '@common/assets/get-src-folder-path';
+import { join } from 'path';
 
 export function getOpenapiYamlPath(defaultValue = 'openapi-spec.yml'): string {
-	const path = getAssetsFolderPath();
-	return `${path}/${defaultValue}`;
+	const path = getSrcFolderPath();
+	return join(path, defaultValue);
 }
